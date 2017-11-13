@@ -1,0 +1,6 @@
+{
+    "name": "CMPclient-embedded-lib",
+    "macros": [
+        "MBEDTLS_USER_CONFIG_FILE=\"mbedtls_config.h\""
+    ]
+}
