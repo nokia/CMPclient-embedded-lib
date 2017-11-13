@@ -1,0 +1,4 @@
+*nombed*
+obj/*.o
+libcmpcl.a
+mbedtls/*
