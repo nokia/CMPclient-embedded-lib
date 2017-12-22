@@ -1,5 +1,6 @@
 # vim: set noexpandtab:
 
+.DEFAULT_GOAL := all
 LDIR=mbedtls/library
 IDIR=mbedtls/include
 CC=gcc
@@ -29,6 +30,9 @@ DEP = $(patsubst %, ./%, $(_DEP))
 $(OBJDIR)/%.o: ./%.c $(DEP)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
+.PHONY: all
+all: $(OUTPUTFILE) mbedtls/library/libmbedcrypto.a
+
 # Build libcmpcl.a from all object files
 $(OUTPUTFILE): $(OBJ)
 	ar ru $@ $^
@@ -38,6 +42,9 @@ $(OUTPUTFILE): $(OBJ)
 clean:
 	for file in $(CLEANEXTS); do rm -f *.$$file $(OBJDIR)/*.$$file; done
 
-.PHONY: mbedtls
-mbedtls:
+mbedtls/library/libmbedcrypto.a:
 	make -C mbedtls
+
+.PHONY: distclean
+distclean: clean
+	make -C mbedtls clean
