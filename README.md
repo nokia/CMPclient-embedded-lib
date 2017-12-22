@@ -56,7 +56,7 @@ also available on GitHub:
 If the code is cloned from GitHub, one might prefer to use the --recurse flag
 ot immeditaly also clone Mbed TLS which is referenced as a git submodule.
 
-$ git clone --recursive https://github.com/nokia/CMPclient-embedded-lib.git
+    $ git clone --recursive https://github.com/nokia/CMPclient-embedded-lib.git
 
 ### Building
 
@@ -66,9 +66,10 @@ ARM Embedded Toolchain.
 #### GCC for Linux
 
 The library (including the Mbed TLS dependency) can be build using make
+
     $ make
 
-This results in libcmpcl.a
+This results in **libcmpcl.a**
 
 #### Mbed CLI and GNU ARM Embedded Toolchain
 
@@ -78,7 +79,7 @@ library.
 
 ## API Reference
 
-See cmpcl.h for the API.
+See **cmpcl.h** for the API.
 
 ## Tests
 
