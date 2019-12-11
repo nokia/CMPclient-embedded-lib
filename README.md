@@ -1,3 +1,10 @@
+## Continued in Forked  Project
+
+Active development of this project is discontinued.
+
+Development of the embedded CMP client is continued a forked project at
+https://github.com/siemens/embeddedCMP
+
 ## Synopsis
 
 This client-side library implementation of RFC 4210 “Certificate Management
